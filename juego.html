@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Página de juego</title>
+    <link rel="stylesheet" href="estilojuego.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+</head><audio id="intro" src="sunflowers.mp3"></audio>
+<body>  
+
+    <script>
+        // Función para ocultar el botón después de 5 segundos de hacer clic
+        function ocultarBoton() {
+            // Obtener el botón por su ID
+            var boton = document.getElementById("botonJugar");
+            
+            // Ocultar el botón
+            boton.style.display = "none";
+        }
+
+        // Función para agregar un retraso de 5 segundos después de hacer clic en el botón
+        function clicEnBoton() {
+            setTimeout(ocultarBoton, 100); // 5000 milisegundos (5 segundos)
+        }
+    </script>
+    
+
+    <div id="intro">
+        <input type="button" value="Jugar" id="botonJugar" onclick="clicEnBoton()"/>
+    </div>
+    <div id="mensaje" class="hidden">
+        <span id="texto_mensaje"></span>
+    </div>
+    <!-- Contenido de la página de juego -->
+    <div id="juego" class="hidden">
+        <div id="figura">
+            <div id="flor">
+                <div id="p1" class="petalo animated fadeIn"></div>
+                <div id="p2" class="petalo animated fadeIn"></div>
+                <div id="p3" class="petalo animated fadeIn"></div>
+                <div id="p4" class="petalo animated fadeIn"></div>
+                <div id="p5" class="petalo animated fadeIn"></div>
+                <div id="p6" class="petalo animated fadeIn"></div>
+                <div id="centro" class="animated pulse infinite"></div>
+            </div>
+            <div id="cesped">
+                <div class="manga"></div>
+                <div class="manga"></div>
+                <div class="manga"></div>
+                <div class="manga"></div>
+                <div class="manga"></div>
+                <div class="manga"></div>
+                <div class="manga"></div>
+                <div class="fondo_manga"></div>
+            </div>
+            <div id="tallo"></div>
+            <div id="hoja"></div>
+            <div id="tallo"></div>
+            <div id="tallo"></div>
+            <div id="tallo"></div>
+            <div id="tallo"></div>
+            <div id="tallo"></div>
+            <div id="hoja"></div>
+            <div id="tallo"></div>
+            <div id="tallo"></div>
+            <div id="tallo"></div>
+            <div id="tallo"></div>
+            <div id="tallo"></div>
+            <div id="hoja"></div>
+            <div id="tallo"></div>
+            <div id="hoja"></div>
+        </div>
+    </div>
+  
+    <audio id="intro" src="sunflowers.mp3"></audio>
+
+
+    <script type="text/javascript" src="juego.js"></script>
+
+</body>
+</html>
