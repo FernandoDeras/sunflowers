@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="estilo.css">
+   
+</head>
+
+<audio id="intro" src="sunflowers.mp3"></audio>
+
+<script type="text/javascript">
+    const introAudio = document.getElementById('intro');
+    const botonReproducir = document.getElementById('botonReproducir');
+
+    // Función para iniciar la reproducción de la música
+    function iniciarReproduccion() {
+        if (introAudio.paused) {
+            introAudio.play();
+            localStorage.setItem('estadoReproduccion', 'reproduciendo'); // Almacenar el estado
+        }
+    }
+
+    // Agregar un evento clic en cualquier parte de la página
+    document.addEventListener('click', function() {
+        iniciarReproduccion();
+    });
+
+    // Agregar un evento clic al botón
+    botonReproducir.addEventListener('click', function(event) {
+        event.stopPropagation(); // Evitar que el clic en el botón se propague al documento
+        iniciarReproduccion();
+    });
+
+    // Almacenar la posición de reproducción cuando se pausa o se cambia la posición
+    introAudio.addEventListener('pause', function() {
+        localStorage.setItem('posicionReproduccion', introAudio.currentTime);
+    });
+
+    introAudio.addEventListener('timeupdate', function() {
+        localStorage.setItem('posicionReproduccion', introAudio.currentTime);
+    });
+</script>
+
+
+<body>
+
+    <div class="principal">
+     <div class="text">
+Te quiero mucho  chula
+     </div>
+  
+<a class="button_jugar" href="juego.html">Jugar</a>
+        <div class="contenedor eContenedores">
+            <div class="petalo petalos"></div>
+            <div class=" petalo2 petalos" id="petalo2"></div>
+            <div class="centro" id="centro"></div>
+            <div class=" petalo3 petalos" id="petalo3"></div>
+            <div class=" petalo4 petalos" id="petalo4"></div>
+            <div class=" petalo5 petalos" id="petalo5"></div>
+            <div class=" petalo6 petalos" id="petalo6"></div>
+            <div class=" petalo7 petalos" id="petalo7"></div>
+            <div class=" petalo8 petalos" id="petalo8"></div>
+            <div class="tallo"></div>
+            <div class="hoja1"></div>
+            <div class="hoja2"></div>
+        </div>
+        <div class="contenedor2 eContenedores">
+            <div class="petalo petalos" id="petalo"></div>
+            <div class=" petalo2 petalos" id="petalo2"></div>
+            <div class="centro" id="centro"></div>
+            <div class=" petalo3 petalos" id="petalo3"></div>
+            <div class=" petalo4 petalos" id="petalo4"></div>
+            <div class=" petalo5 petalos" id="petalo5"></div>
+            <div class=" petalo6 petalos" id="petalo6"></div>
+            <div class=" petalo7 petalos" id="petalo7"></div>
+            <div class=" petalo8 petalos" id="petalo8"></div>
+            <div class="tallo"></div>
+            <div class="hoja1"></div>
+            <div class="hoja2"></div>
+
+        </div>
+        <div class="contenedor3 eContenedores">
+            <div class="petalo petalos" id="petalo"></div>
+            <div class=" petalo2 petalos" id="petalo2"></div>
+            <div class="centro" id="centro"></div>
+            <div class=" petalo3 petalos" id="petalo3"></div>
+            <div class=" petalo4 petalos" id="petalo4"></div>
+            <div class=" petalo5 petalos" id="petalo5"></div>
+            <div class=" petalo6 petalos" id="petalo6"></div>
+            <div class=" petalo7 petalos" id="petalo7"></div>
+            <div class=" petalo8 petalos" id="petalo8"></div>
+            <div class="tallo"></div>
+            <div class="hoja1"></div>
+            <div class="hoja2"></div>
+
+        </div>
+        <div class="contenedor4 eContenedores">
+            <div class="petalo petalos" id="petalo"></div>
+            <div class=" petalo2 petalos" id="petalo2"></div>
+            <div class="centro" id="centro"></div>
+            <div class=" petalo3 petalos" id="petalo3"></div>
+            <div class=" petalo4 petalos" id="petalo4"></div>
+            <div class=" petalo5 petalos" id="petalo5"></div>
+            <div class=" petalo6 petalos" id="petalo6"></div>
+            <div class=" petalo7 petalos" id="petalo7"></div>
+            <div class=" petalo8 petalos" id="petalo8"></div>
+            <div class="tallo"></div>
+            <div class="hoja1"></div>
+            <div class="hoja2"></div>
+
+        </div>
+        <div class="contenedor5 eContenedores">
+            <div class="petalo petalos" id="petalo"></div>
+            <div class=" petalo2 petalos" id="petalo2"></div>
+            <div class="centro" id="centro"></div>
+            <div class=" petalo3 petalos" id="petalo3"></div>
+            <div class=" petalo4 petalos" id="petalo4"></div>
+            <div class=" petalo5 petalos" id="petalo5"></div>
+            <div class=" petalo6 petalos" id="petalo6"></div>
+            <div class=" petalo7 petalos" id="petalo7"></div>
+            <div class=" petalo8 petalos" id="petalo8"></div>
+            <div class="tallo"></div>
+            <div class="hoja1"></div>
+            <div class="hoja2"></div>
+
+        </div>
+        <div class="contenedor6 eContenedores">
+            <div class="petalo petalos" id="petalo"></div>
+            <div class=" petalo2 petalos" id="petalo2"></div>
+            <div class="centro" id="centro"></div>
+            <div class=" petalo3 petalos" id="petalo3"></div>
+            <div class=" petalo4 petalos" id="petalo4"></div>
+            <div class=" petalo5 petalos" id="petalo5"></div>
+            <div class=" petalo6 petalos" id="petalo6"></div>
+            <div class=" petalo7 petalos" id="petalo7"></div>
+            <div class=" petalo8 petalos" id="petalo8"></div>
+            <div class="tallo"></div>
+            <div class="hoja1"></div>
+            <div class="hoja2"></div>
+
+        </div>
+        <div class="contenedor7 eContenedores">
+            <div class="petalo petalos" id="petalo"></div>
+            <div class=" petalo2 petalos" id="petalo2"></div>
+            <div class="centro" id="centro"></div>
+            <div class=" petalo3 petalos" id="petalo3"></div>
+            <div class=" petalo4 petalos" id="petalo4"></div>
+            <div class=" petalo5 petalos" id="petalo5"></div>
+            <div class=" petalo6 petalos" id="petalo6"></div>
+            <div class=" petalo7 petalos" id="petalo7"></div>
+            <div class=" petalo8 petalos" id="petalo8"></div>
+            <div class="tallo"></div>
+            <div class="hoja1"></div>
+            <div class="hoja2"></div>
+
+        </div>
+        <div class="contenedor8 eContenedores">
+            <div class="petalo petalos" id="petalo"></div>
+            <div class=" petalo2 petalos" id="petalo2"></div>
+            <div class="centro" id="centro"></div>
+            <div class=" petalo3 petalos" id="petalo3"></div>
+            <div class=" petalo4 petalos" id="petalo4"></div>
+            <div class=" petalo5 petalos" id="petalo5"></div>
+            <div class=" petalo6 petalos" id="petalo6"></div>
+            <div class=" petalo7 petalos" id="petalo7"></div>
+            <div class=" petalo8 petalos" id="petalo8"></div>
+            <div class="tallo"></div>
+            <div class="hoja1"></div>
+            <div class="hoja2"></div>
+
+        </div>
+        <div class="contenedor9 eContenedores">
+            <div class="petalo petalos" id="petalo"></div>
+            <div class=" petalo2 petalos" id="petalo2"></div>
+            <div class="centro" id="centro"></div>
+            <div class=" petalo3 petalos" id="petalo3"></div>
+            <div class=" petalo4 petalos" id="petalo4"></div>
+            <div class=" petalo5 petalos" id="petalo5"></div>
+            <div class=" petalo6 petalos" id="petalo6"></div>
+            <div class=" petalo7 petalos" id="petalo7"></div>
+            <div class=" petalo8 petalos" id="petalo8"></div>
+            <div class="tallo"></div>
+            <div class="hoja1"></div>
+            <div class="hoja2"></div>
+
+        </div>
+        <div class="contenedor10 eContenedores">
+            <div class="petalo petalos" id="petalo"></div>
+            <div class=" petalo2 petalos" id="petalo2"></div>
+            <div class="centro" id="centro"></div>
+            <div class=" petalo3 petalos" id="petalo3"></div>
+            <div class=" petalo4 petalos" id="petalo4"></div>
+            <div class=" petalo5 petalos" id="petalo5"></div>
+            <div class=" petalo6 petalos" id="petalo6"></div>
+            <div class=" petalo7 petalos" id="petalo7"></div>
+            <div class=" petalo8 petalos" id="petalo8"></div>
+            <div class="tallo"></div>
+            <div class="hoja1"></div>
+            <div class="hoja2"></div>
+
+        </div>
+        <div class="contenedor11 eContenedores">
+            <div class="petalo petalos" id="petalo"></div>
+            <div class=" petalo2 petalos" id="petalo2"></div>
+            <div class="centro" id="centro"></div>
+            <div class=" petalo3 petalos" id="petalo3"></div>
+            <div class=" petalo4 petalos" id="petalo4"></div>
+            <div class=" petalo5 petalos" id="petalo5"></div>
+            <div class=" petalo6 petalos" id="petalo6"></div>
+            <div class=" petalo7 petalos" id="petalo7"></div>
+            <div class=" petalo8 petalos" id="petalo8"></div>
+            <div class="tallo"></div>
+            <div class="hoja1"></div>
+            <div class="hoja2"></div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
